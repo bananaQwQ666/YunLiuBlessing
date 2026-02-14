@@ -1,0 +1,57 @@
+menu:
+  main_title: "§x§0§f§b§6§f§f云琉世界神树祝福系统"
+  post_button:
+    material: WRITABLE_BOOK
+    slot: 2
+    name: "§a[发布祝福]"
+    lore: ["§7点击这里为世界播种希望", "§7可选对象：自己/他人/服务器"]
+  my_button:
+    material: BOOK
+    slot: 4
+    name: "§b[我的祝福]"
+    lore: ["§7管理、修改或删除你已发布的祝福"]
+  all_button:
+    material: NETHER_STAR
+    slot: 6
+    name: "§e[大家的祝福]"
+    lore: ["§7查看所有流传在世间的温暖"]
+
+target_menu:
+  title: "选择祝福对象"
+  self: { name: "§a祝福自己", material: PLAYER_HEAD, slot: 2 }
+  others: { name: "§b祝福他人", material: WRITTEN_BOOK, slot: 4 }
+  server: { name: "§6全服务器", material: BEACON, slot: 6 }
+
+hologram:
+  update_interval: 100 # 轮播频率 (20 ticks = 1s)
+  format: "§6[神树祝福] §b%sender% §f对 §e%target% §f说："
+  # --- 新增全息装饰 ---
+  header: "§x§0§f§b§6§f§f---云琉世界神树祝福系统---"
+  footer: "§x§0§f§b§6§f§f--------------------------"
+  max_line_length: 24
+
+messages:
+  help_header: "§e======= §x§0§f§b§6§f§f云琉祝福系统 §e======="
+  help_format: "§b%cmd% §7» §f%desc%"
+  help_list:
+    - "/zhufu|打开祝福主菜单"
+    - "/zhufu help|显示帮助信息"
+    - "/zhufu hologram create <ID> <类型>|创建全息(类型: 自己/他人/全服/ALL)"
+    - "/zhufu hologram delete <ID>|删除指定ID的全息字"
+  help_footer: "§e========================================"
+  enter_blessing: "§e[系统] 请在聊天框输入你的祝福内容（输入 'cancel' 取消）："
+  # --- 新增消息 ---
+  enter_edit: "§b[系统] 请输入修改后的内容。原内容：\n§f%content%"
+  enter_comment: "§e[评论] 请输入你的评论内容："
+  cooldown: "§c你需要等待 %time% 秒才能再次发布。"
+  cancel: "§c已取消。"
+  success: "§a祝福发布成功！"
+  delete_success: "§c已成功删除。"
+
+settings:
+  post_cooldown: 60 # 冷却秒数
+
+data:
+  blessings: []
+  holograms: {}
+  metadata: {} # 存储点赞和评论
