@@ -1,8 +1,0 @@
-name: BlessingPlugin
-version: 1.0
-main: com.lazyman.blessing.BlessingPlugin
-api-version: 1.20
-commands:
-  zhufu:
-    description: 云琉世界神树祝福系统主指令
-    usage: /zhufu help
